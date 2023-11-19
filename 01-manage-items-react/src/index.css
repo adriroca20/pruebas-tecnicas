@@ -54,9 +54,10 @@ button, input{
 }
 input{
   display: block;
-  cursor: default;
+  cursor: text;
   border: 1px solid rgba(255, 255, 255, 0.267);
   margin-top: 5px;
+  width: 250px;
 }
 button:hover {
   border-color: #646cff;
