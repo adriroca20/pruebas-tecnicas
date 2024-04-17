@@ -10,12 +10,12 @@ export class Media implements IMedia {
         bitrate: number;
         fileSize: number;
         filename: string;
-        thumbnailroute: string;
     };
     thumbnail: {
         id: string;
         name: string;
         filename: string;
+        thumbnailroute: string;
     };
     mediaroute: string;
 
@@ -27,9 +27,11 @@ export class Media implements IMedia {
         this.tags = tags;
         this.filedata = {
             ...filedata,
+        };
+        this.thumbnail = {
+            ...thumbnail,
             thumbnailroute: process.env.THUMBNAIL_ROUTE + thumbnail.filename
         };
-        this.thumbnail = thumbnail;
         this.mediaroute = process.env.MEDIA_ROUTE + filedata.filename;
     }
 }
