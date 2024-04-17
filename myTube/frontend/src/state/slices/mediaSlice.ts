@@ -10,7 +10,14 @@ export const mediaSlice = apiSlice.injectEndpoints({
             }),
             providesTags: ["Media"],
         }),
+        getMediaById: builder.query({
+            query: (id) => ({
+                url: `${MEDIA_URL}/getmedia/${id}`,
+                method: "GET",
+            }),
+            providesTags: ["Media"],
+        }),
     }),
 });
 
-export const { useGetMediaQuery } = mediaSlice;
+export const { useGetMediaQuery, useGetMediaByIdQuery } = mediaSlice;

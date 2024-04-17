@@ -7,7 +7,7 @@ export const Hero = (heroData: IHero) => {
     const { data, isLoading, isError } = useGetMediaQuery({})
     const media:IMedia[] = data
     return (
-        <section className="lg:h-[70vh] flex justify-center px-20 items-start flex-col gap-5">
+        <section className="flex justify-center p-20 items-center flex-col gap-5">
             <h1 className="text-6xl font-extrabold">{title}</h1>
             <h3 className="text-3xl font-bold text-balance">{subtitle}</h3>
             <p className="text-xl">
