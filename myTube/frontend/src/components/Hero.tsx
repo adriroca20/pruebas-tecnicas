@@ -15,7 +15,10 @@ export const Hero = (heroData: IHero) => {
                 {description}
             </p>
             <div>
-            <a href="#related-videos" className="text-white text-lg font-medium bg-[#017fba] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 transition">Watch now</a>
+                <div className="flex gap-4">
+            <a href="#related-videos" className="text-white text-xl font-medium bg-[#017fba] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 transition">Watch now</a>
+            <Link to="/upload" className="text-blue-500 text-xl font-medium bg-[#d4d9db] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 transition">Upload videos</Link>
+                </div>
             </div>
         </section>
     )
