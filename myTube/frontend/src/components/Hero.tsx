@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { IHero } from "../interfaces/hero.interface"
 import { IMedia } from "../interfaces/media.interface"
 import { useGetMediaQuery } from "../state/slices/mediaSlice"
@@ -14,7 +15,7 @@ export const Hero = (heroData: IHero) => {
                 {description}
             </p>
             <div>
-            <button type="button" className="text-white text-lg font-medium bg-[#017fba] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 me-2 mb-2 transition">Watch now</button>
+            <a href="#related-videos" className="text-white text-lg font-medium bg-[#017fba] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-lg px-5 py-2.5 transition">Watch now</a>
             </div>
         </section>
     )
