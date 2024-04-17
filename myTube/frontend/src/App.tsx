@@ -5,6 +5,8 @@ import './App.css'
 import { Navbar } from './shared/Navbar'
 import { Footer } from './shared/Footer'
 import { Outlet } from 'react-router-dom'
+import { IMedia } from './interfaces/media.interface'
+import { useGetMediaQuery } from './state/slices/mediaSlice'
 
 function App() {
   return (
