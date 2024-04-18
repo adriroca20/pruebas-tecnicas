@@ -25,7 +25,7 @@ export const Slider = ({
                 <div className="flex items-center justify-end gap-3">
                   <Link
                     to={`/video-player/${media.id}`}
-                    className="text-white text-lg font-medium bg-[#017fba] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-full p-3 transition"
+                    className="text-white text-lg z-10 font-medium bg-[#017fba] hover:bg-slate-200 hover:text-[#017fba] focus:outline-none focus:ring-4 focus:ring-gray-300 rounded-full p-3 transition"
                   >
                     <PlayIcon></PlayIcon>
                   </Link>
@@ -34,6 +34,7 @@ export const Slider = ({
                   </span>
                 </div>
               </div>
+              <Link to={`/video-player/${media.id}`} className="absolute inset-0"></Link>
             </div>
           ))}
       </Carousel>
