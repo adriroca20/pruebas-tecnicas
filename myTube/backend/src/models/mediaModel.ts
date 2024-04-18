@@ -1,7 +1,7 @@
 import { IMedia } from "../interfaces/media.interface";
 
 export class Media implements IMedia {
-    id: string;
+    id: string; //Aquí se pide como obligatorio el id porque nuestra BDD es un JSON. Si fuera una base de datos SQL, el id sería autoincremental y no sería necesario pasarlo como parámetro.
     title: string;
     description: string;
     duration: number;

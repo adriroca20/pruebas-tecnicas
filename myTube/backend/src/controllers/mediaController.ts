@@ -7,8 +7,12 @@ const MEDIA_ITEMS:Media[] =MediasORM.getMediaItems();
 export const getMediaItems: RequestHandler = (req, res) => {
     res.status(200).send(MEDIA_ITEMS);
 }
-export const addMediaItem: RequestHandler = (req, res) => {
-    res.status(200).send("Media Route post request");
+export const createMediaItem: RequestHandler = (req, res) => {
+    const media: Media = req.body.mediaToUpload;
+    MEDIA_ITEMS.push(media);
+    //Persistent storage of media items
+    MediasORM.storeMediaItem(media);
+    res.status(200).send("Media item created successfully");
 }
 export const getMediaById: RequestHandler = (req, res) => {
     const mediaId = req.params.id;

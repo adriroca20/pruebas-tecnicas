@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getMediaItems, getMediaById } from "../controllers/mediaController";
+import { getMediaItems, getMediaById, createMediaItem } from "../controllers/mediaController";
 const router = Router();
 router.get("/", (req, res) => {
     res.send("Media Route get request");
@@ -9,8 +9,6 @@ router.post("/", (req, res) => {
 });
 router.get("/getmedias", getMediaItems);
 router.get("/getmedia/:id", getMediaById);
-router.post("/addmedias", (req, res) => {
-    res.send("Hello World");
-});
+router.post("/addmedias",createMediaItem);
 
 export default router;
