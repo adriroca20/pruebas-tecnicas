@@ -10,7 +10,7 @@ export const Landing = () => {
   const { data, isLoading, isError } = useGetMediaQuery({});
   const media: IMedia[] = data;
   return (
-    <main className="text-zinc-100 pt-20" id="home">
+    <main className="text-zinc-900 dark:text-slate-200 pt-20" id="home">
       <Slider sliderData={media} className="h-96" />
       <Hero
         title="Welcome to the Video App"

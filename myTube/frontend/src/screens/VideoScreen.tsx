@@ -33,7 +33,7 @@ export const VideoScreen = () => {
               allowFullScreen
             ></iframe>
             <div className="text-slate-200 flex justify-between py-6 items-center w-full gap-5">
-              <div className="text-slate-200 flex justify-start items-start gap-2 flex-col">
+              <div className="text-zinc-900 dark:text-slate-200 flex justify-start items-start gap-2 flex-col">
                 <h2 className="text-4xl font-bold">{media.title}</h2>
                 <p>{media.description}</p>
               </div>
