@@ -12,7 +12,9 @@ export const createMediaItem: RequestHandler = (req, res) => {
     MEDIA_ITEMS.push(media);
     //Persistent storage of media items
     MediasORM.storeMediaItem(media);
-    res.status(200).send("Media item created successfully");
+    res.status(200).send({
+        message: "Media item created successfully",
+    });
 }
 export const getMediaById: RequestHandler = (req, res) => {
     const mediaId = req.params.id;
