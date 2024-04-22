@@ -23,12 +23,12 @@ export const RelatedVideos = ({ videosData }: { videosData: IMedia[] }) => {
                 <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:text-blue-500 hover:bg-slate-200 transition"><SearchIcon /></button>
                 <button type="button" onClick={() => setFilteredVideos(videosData)} className="bg-gray-500 text-white px-4 py-2 rounded-md text-nowrap">Clear filters</button>
             </form >
-            <div className="flex gap-2 w-full h-fit flex-wrap">
+            <div className="flex gap-2 w-full h-fit flex-wrap items-center justify-center">
                 {
                     filteredVideos.length > 0 ?
                     (
                         filteredVideos.map((video: IMedia, index: number) => (
-                            <VideoCard key={index} videoCardData={video} className="min-w-[400px] max-w-[30%]" />
+                            <VideoCard key={index} videoCardData={video} className="min-w-[400px] max-w-[600px]" />
                         ))
                     ):
                     (

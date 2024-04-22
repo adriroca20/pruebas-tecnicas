@@ -45,7 +45,7 @@ export const VideoScreen = () => {
               </div>
             </div>
           </div>
-          <RelatedVideos videosData={relatedVideosData} title="Related videos"></RelatedVideos>
+          <RelatedVideos videosData={relatedVideosData}></RelatedVideos>
         </section>
       )}
     </>
