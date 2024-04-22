@@ -4,6 +4,10 @@
 MyTube es una aplicación para ver y compartir videos. Permite a los usuarios registrarse, subir videos, comentar y dar me gusta a los videos de otros usuarios.
 
 ## Inspiración y diseño UI/UX
+En un principio, busqué diseños que pudiesen resultar interesantes en Figma para tomar inspiración.
+Encontré el siguiente: https://www.figma.com/file/cYIgc9PSRcHzjK3AyCaGlY/OTT-Platform-UI-(Community)?type=design&node-id=0-1&mode=design&t=uvluAjjQLNvVk01M-0
+Sin embargo, las miniaturas obtenidas carecían de la resolucion necesaria para utilizarse como fondo de pantalla, al igual igual que en el diseño seleccionado.
+Por ese motivo, cambié el diseño a uno más similar e inspirado en PrimeVideo, creando un wireframe en Excalidraw.
 
 ## Requisitos previos
 - Node.js
