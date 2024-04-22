@@ -53,13 +53,11 @@ const UploadVideoScreen: React.FC = () => {
             description,
             tags: tagsString
         }
-        console.log(mediaToUpload);
         try {
             await postMedia({ mediaToUpload }).unwrap();
             toast.success('Video uploaded successfully');
         }
         catch (err) {
-            console.error(err);
             toast.error('Failed to upload video');
         }
     };
