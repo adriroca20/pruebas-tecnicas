@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
-import { IMedia } from '../src/interfaces/media.interface';
-const LOCALHOST_URL = "http://localhost:5173/"
-const MEDIA_MOCK: IMedia = {
+import { IMedia } from "../src/interfaces/media.interface"
+
+export const LOCALHOST_URL = "http://localhost:5173/"
+export const MEDIA_MOCK: IMedia = {
   "id": "63d4ec71-5df7-4a0e-9216-2510d47649e5",
   "title": "Plane sample",
   "description": "Despegue ligero",
@@ -20,15 +20,3 @@ const MEDIA_MOCK: IMedia = {
   },
   "mediaroute": "https://storagecdn.codev8.net/ondemand/b4ab8f95-bc2b-4d88-8ff0-df4df19d206c/63d4ec71-5df7-4a0e-9216-2510d47649e5_Fast_H1500.mp4"
 }
-test('Landing page load', async ({ page }) => {
-  await page.goto(LOCALHOST_URL);
-  await expect(page).toHaveTitle(/MyTube - Corporate Videos/);
-});
-test("Wrong route redirects to 404", async ({ page }) => {
-  await page.goto(LOCALHOST_URL + "wrong-route");
-  await expect(page).toHaveTitle(/404 Not Found - MyTube/);
-});
-test("Video player page load", async ({ page }) => {
-  await page.goto(LOCALHOST_URL + `video-player/${MEDIA_MOCK.id}`);
-  await expect(page).toHaveTitle(/MyTube - Corporate Videos/);
-});
