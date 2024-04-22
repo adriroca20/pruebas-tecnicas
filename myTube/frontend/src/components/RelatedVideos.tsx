@@ -3,7 +3,7 @@ import { VideoCard } from "./VideoCard"
 
 export const RelatedVideos = ({videosData, title} : {videosData:IMedia[], title:string}) => {
     return (
-        <section id="related-videos" className="flex flex-col gap-2 px-20">
+        <section id="related-videos" className="flex flex-col gap-2 px-20 pb-10">
             <h2 className="text-2xl font-bold text-zinc-900 dark:text-slate-200">{title}</h2>
             <div className="flex gap-2 w-full h-fit flex-wrap">
                 {

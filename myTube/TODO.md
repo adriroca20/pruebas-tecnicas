@@ -1,7 +1,8 @@
-- Acabar el footer
+- Acabar el footer ✅
 - Responsive
-- Aumentar tamaño subitulo video
-- Cambiar Titulo y subtitulo hero
+- Aumentar tamaño subitulo video ✅
+- Cambiar Titulo y subtitulo hero ✅
 - Cambiar titulo por barra de búsqueda
-- Animacion al carousel
-- Cambiar el icono de la navbar
+- Animacion al carousel✅
+- Cambiar el icono de la navbar ✅
+- Eliminar imports innecesarios✅

@@ -11,10 +11,10 @@ export const Landing = () => {
   const media: IMedia[] = data;
   return (
     <main className="text-zinc-900 dark:text-slate-200 pt-20" id="home">
-      <Slider sliderData={media} className="h-96" />
+      <Slider sliderData={media}/>
       <Hero
-        title="Welcome to the Video App"
-        subtitle="This is a simple video app"
+        title="Welcome to MyTube"
+        subtitle="Find the best corporate videos here!"
         description="This is a simple video app that allows you to upload and view videos."
       />
       {media && (

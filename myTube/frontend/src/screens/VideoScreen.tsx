@@ -13,9 +13,6 @@ export const VideoScreen = () => {
   const { data: relatedVideosData, isLoading: videosDataLoading } =
     useGetMediaQuery({});
   const media: IMedia = data;
-  useEffect(() => {
-    console.log(relatedVideosData);
-  }, [relatedVideosData]);
   function getTags(): string[] {
     return media.tags.split(", ");
   }
@@ -35,7 +32,11 @@ export const VideoScreen = () => {
             <div className="text-slate-200 flex justify-between py-6 items-center w-full gap-5">
               <div className="text-zinc-900 dark:text-slate-200 flex justify-start items-start gap-2 flex-col">
                 <h2 className="text-4xl font-bold">{media.title}</h2>
-                <p>{media.description}</p>
+                {
+                  media.description && (
+                    <p className="text-2xl">{media.description}</p>
+                  )
+                }
               </div>
               <div className="flex gap-5">
                 {getTags().map((tag) => (
