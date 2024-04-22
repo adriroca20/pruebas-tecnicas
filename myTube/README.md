@@ -85,7 +85,7 @@ Después, me centré en la funcionalidad más importante: `Ver un video`.
 Así conseguí obtener el resultado esperado de la aplicación en un menor tiempo, permitiéndome añadir funcionalidades extra.
 
 ## Problemas encontrados
-- Obtener y manejar datos de un JSON, sin tener una BDD o un ORM que facilite el CRUD.
+- Obtener y manejar datos de un JSON, sin tener una BDD o un ORM que facilite el CRUD, ya que había dos propiedades calculadas, requiriendo que dichos objetos tengan que ser instanciados y devueltos en forma de Array
 - El diseño de la UI elegido en un principio no fué posible implementarlo debido a la baja calidad de las miniaturas, por lo que tuve que pivotar hacia un nuevo diseño.
 - Creación de la funcionalidad `Subir video`, ya que no se puede subir un video a la plataforma `storagecdn.codev8.net`
 - Adaptar la UI para que sea más intuitivo como poder reproducir los videos
