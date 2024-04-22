@@ -19,8 +19,8 @@ export const RelatedVideos = ({ videosData }: { videosData: IMedia[] }) => {
     return (
         <section id="related-videos" className="flex flex-col items-center gap-5 px-20 pb-10">
             <form className="flex gap-2 w-1/2" onSubmit={browseVideos}>
-                <input type="text" value={searchData} onChange={handleDataChange} placeholder="Browse..." className="border border-gray-300 px-2 py-1 rounded-md w-full" />
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md"><SearchIcon /></button>
+                <input type="text" value={searchData} onChange={handleDataChange} placeholder="Browse..." className="border border-gray-300 px-2 py-1 rounded-md w-full dark:text-slate-900" />
+                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:text-blue-500 hover:bg-slate-200 transition"><SearchIcon /></button>
                 <button type="button" onClick={() => setFilteredVideos(videosData)} className="bg-gray-500 text-white px-4 py-2 rounded-md text-nowrap">Clear filters</button>
             </form >
             <div className="flex gap-2 w-full h-fit flex-wrap">
