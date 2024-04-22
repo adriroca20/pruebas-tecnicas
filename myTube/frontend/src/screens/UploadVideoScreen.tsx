@@ -67,36 +67,36 @@ const UploadVideoScreen: React.FC = () => {
     return (
         <> 
             <div className="flex flex-col items-center justify-center h-screen">
-                <h1 className="text-3xl font-bold  text-slate-200 pb-5">Upload Video</h1>
+                <h1 className="text-3xl font-bold  text-zinc-900 dark:text-slate-200 pb-5">Upload Video</h1>
                 <form className="flex flex-col items-center gap-10 w-[500px]" onSubmit={handleSubmit}>
                     <div className='relative w-full'>
-                        <label htmlFor="title" className="text-slate-200 absolute bg-black top-[-15px] left-3 px-3 rounded ">Title</label>
+                        <label htmlFor="title" className="text-zinc-900 dark:text-slate-200 absolute bg-white dark:bg-zinc-800 dark:border-gray-600  top-[-15px] border left-3 px-3 rounded  ">Title</label>
                         <input
                             type="text"
-                            placeholder="Title"
+                            placeholder="Title of the video"
                             value={title}
                             onChange={handleTitleChange}
-                            className="border border-gray-300 rounded-md px-4 py-2 h-12  w-full"
+                            className="border rounded-md px-4 py-2 h-12 border-blue-500 w-full"
                         />
                     </div>
                     <div className='relative  w-full'>
-                        <label htmlFor="description" className="text-slate-200 absolute bg-black top-[-15px] left-3 px-3 rounded ">Description</label>
+                        <label htmlFor="description" className="text-zinc-900 dark:text-slate-200 absolute bg-white dark:bg-zinc-800 dark:border-gray-600  border top-[-15px] left-3 px-3 rounded ">Description</label>
                         <input
                             type="text"
-                            placeholder="Description"
+                            placeholder="This video is about..."
                             value={description}
                             onChange={handleDescriptionChange}
-                            className="border border-gray-300 rounded-md px-4 py-2 h-12  w-full"
+                            className="border border-blue-500 rounded-md px-4 py-2 h-12  w-full"
                         />
                     </div>
                     <div className='relative  w-full'>
-                        <label htmlFor="tags" className="text-slate-200 absolute bg-black top-[-15px] left-3 px-3 rounded ">Tags</label>
+                        <label htmlFor="tags" className="text-zinc-900 dark:text-slate-200 absolute bg-white dark:bg-zinc-800 border dark:border-gray-600 top-[-15px] left-3 px-3 rounded ">Tags</label>
                         <input
                             type="text"
-                            placeholder="Add your tags"
+                            placeholder="Nature, Music, etc."
                             value={tag}
                             onChange={handleTagsChange}
-                            className="border border-gray-300 rounded-md px-4 py-2 h-12  w-full"
+                            className="border border-blue-500 rounded-md px-4 py-2 h-12  w-full"
                         />
                         <button type="button" onClick={addTag} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded absolute right-0 h-full">Add Tag</button>
                     </div>
