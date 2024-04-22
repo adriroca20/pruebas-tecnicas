@@ -1,12 +1,13 @@
-import { useEffect } from "react";
 import { Hero } from "../components/Hero";
-import { VideoCard } from "../components/VideoCard";
 import { useGetMediaQuery } from "../state/slices/mediaSlice";
 import { IMedia } from "../interfaces/media.interface";
 import { Slider } from "../components/Slider";
 import { RelatedVideos } from "../components/RelatedVideos";
 
 export const Landing = () => {
+  //data is the media array
+  //isLoading is a boolean that is true when the data is being fetched
+  //isError is a boolean that is true when there is an error fetching the data
   const { data, isLoading, isError } = useGetMediaQuery({});
   const media: IMedia[] = data;
   return (
@@ -20,7 +21,6 @@ export const Landing = () => {
       {media && (
         <RelatedVideos
           videosData={media}
-          title="You may also like"
         ></RelatedVideos>
       )}
     </main>
