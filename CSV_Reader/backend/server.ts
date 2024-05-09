@@ -28,12 +28,11 @@ app.post('/api/files', upload.single("file"), async (req, res) => {
         return res.status(400).json({ message: 'No file uploaded' });
     }
     if (file.mimetype !== 'text/csv') {
-        return res.status(400).json({ message: 'Invalid file type' });
+        return res.status(500).json({ message: 'Invalid file type' });
     }
     try {
-        const csv = file.buffer.toString("utf8");
-        json = csvToJson.fieldDelimiter(',').getJsonFromCsv(csv);
-        console.log(json);
+        const csv = Buffer.from(file.buffer).toString('utf-8');
+        json = csvToJson.fieldDelimiter(",").csvStringToJson(csv);
     } catch (error) {
         return res.status(400).json({ message: 'Invalid file content' });
     }
