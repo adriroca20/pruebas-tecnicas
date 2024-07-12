@@ -1,6 +1,6 @@
 import { IMedia } from "./interfaces/media.interface";
 
-export const BASE_URL = process.env.NODE_ENV === "development" ? 'http://localhost:3000' : "";
+export const BASE_URL = process.env.NODE_ENV === "development" ? 'https://mytube-backend.onrender.com' : "";
 export const MEDIA_URL = "/media";
 export const MEDIA_FILE_MOCKUP: IMedia = {
     "id": "63d4ec71-5df7-4a0e-9216-2510d47649e5",

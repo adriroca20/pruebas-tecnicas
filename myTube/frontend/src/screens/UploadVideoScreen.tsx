@@ -3,7 +3,6 @@ import { Pill } from '../components/Pill';
 import { MEDIA_FILE_MOCKUP } from '../constants';
 import { IMedia } from '../interfaces/media.interface';
 import { usePostMediaMutation } from '../state/slices/mediaSlice';
-import { Spinner } from '../components/Spinner';
 import { toast } from 'react-toastify';
 
 const UploadVideoScreen: React.FC = () => {
@@ -53,11 +52,13 @@ const UploadVideoScreen: React.FC = () => {
             description,
             tags: tagsString
         }
+        console.log(mediaToUpload);
         try {
             await postMedia({ mediaToUpload }).unwrap();
             toast.success('Video uploaded successfully');
         }
         catch (err) {
+            console.error(err);
             toast.error('Failed to upload video');
         }
     };

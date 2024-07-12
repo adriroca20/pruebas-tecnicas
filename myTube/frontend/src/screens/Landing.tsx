@@ -5,22 +5,20 @@ import { Slider } from "../components/Slider";
 import { RelatedVideos } from "../components/RelatedVideos";
 
 export const Landing = () => {
-  //data is the media array
-  //isLoading is a boolean that is true when the data is being fetched
-  //isError is a boolean that is true when there is an error fetching the data
-  const { data, isLoading, isError } = useGetMediaQuery({});
+  const { data } = useGetMediaQuery({});
   const media: IMedia[] = data;
   return (
     <main className="text-zinc-900 dark:text-slate-200 pt-20" id="home">
-      <Slider sliderData={media}/>
+      <Slider sliderData={media} className="h-96" />
       <Hero
-        title="Welcome to MyTube"
-        subtitle="Find the best corporate videos here!"
+        title="Welcome to the Video App"
+        subtitle="This is a simple video app"
         description="This is a simple video app that allows you to upload and view videos."
       />
       {media && (
         <RelatedVideos
           videosData={media}
+          title="You may also like"
         ></RelatedVideos>
       )}
     </main>

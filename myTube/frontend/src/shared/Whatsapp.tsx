@@ -1,10 +1,13 @@
-export const Whatsapp = () => {
+interface IWhatsappProps {
+  classes: string;
+}
+export const Whatsapp = ({ classes }: IWhatsappProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       viewBox="0 0 256 256"
-      className="h-6"
+      className={classes}
     >
       <path
         d="m67.663 221.823 4.185 2.093c17.44 10.463 36.971 15.346 56.503 15.346 61.385 0 111.609-50.224 111.609-111.609 0-29.297-11.859-57.897-32.785-78.824-20.927-20.927-48.83-32.785-78.824-32.785-61.385 0-111.61 50.224-110.912 112.307 0 20.926 6.278 41.156 16.741 58.594l2.79 4.186-11.16 41.156 41.853-10.464Z"

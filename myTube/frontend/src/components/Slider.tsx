@@ -6,9 +6,10 @@ export const Slider = ({
   sliderData,
 }: {
   sliderData: IMedia[];
+  className?: string;
 }) => {
   return (
-    <div className="h-96 px-20">
+    <div className="h-80 px-20">
       <Carousel slide={true}>
         {sliderData &&
           sliderData.map((media: IMedia, index: number) => (

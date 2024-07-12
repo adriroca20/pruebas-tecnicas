@@ -1,46 +1,17 @@
 import { IMedia } from "../interfaces/media.interface"
 import { VideoCard } from "./VideoCard"
-import { SearchIcon } from "../icons/SearchIcon";
-import { useState } from "react";
-export const RelatedVideos = ({ videosData }: { videosData: IMedia[] }) => {
-    const [filteredVideos, setFilteredVideos] = useState<IMedia[]>(videosData);
-    const [searchData, setSearchData] = useState<string>("");
 
-    const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchData(e.target.value);
-    };
-    const browseVideos = (e: React.FormEvent) => {
-        e.preventDefault();
-        if (searchData === "") return;
-        const newFilteredVideos = videosData.filter((video: IMedia) => video.title.toLowerCase().includes(searchData.toLowerCase()));
-        setFilteredVideos(newFilteredVideos);
-        setSearchData("");
-    }
+export const RelatedVideos = ({videosData, title} : {videosData:IMedia[], title:string}) => {
     return (
-        <section id="related-videos" className="flex flex-col items-center gap-5 px-20 pb-10">
-            <form className="flex gap-2 w-1/2" onSubmit={browseVideos}>
-                <input type="text" value={searchData} onChange={handleDataChange} placeholder="Browse..." className="border border-gray-300 px-2 py-1 rounded-md w-full dark:text-slate-900" />
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:text-blue-500 hover:bg-slate-200 transition"><SearchIcon /></button>
-                <button type="button" onClick={() => setFilteredVideos(videosData)} className="bg-gray-500 text-white px-4 py-2 rounded-md text-nowrap">Clear filters</button>
-            </form >
-            <div className="flex gap-2 w-full h-fit flex-wrap items-center justify-center">
+        <section id="related-videos" className="flex flex-col gap-2 px-20">
+            <h2 className="text-2xl font-bold text-zinc-900 dark:text-slate-200">{title}</h2>
+            <div className="flex gap-2 w-full h-fit flex-wrap">
                 {
-                    filteredVideos.length > 0 ?
-                    (
-                        filteredVideos.map((video: IMedia, index: number) => (
-                            <VideoCard key={index} videoCardData={video} className="min-w-[400px] max-w-[600px]" />
-                        ))
-                    ):
-                    (
-                        <>
-                        <h2 className="text-2xl text-center w-full">No videos found</h2>
-                        <h3 className="text-xl text-center w-full">Try looking for plane, sample...</h3>
-                        </>
-                    )
+                    videosData.map((video:IMedia, index:number) => (
+                        <VideoCard key={index} videoCardData={video} className="min-w-[400px]"/>
+                    ))
                 }
             </div>
         </section>
     )
 }
-
-

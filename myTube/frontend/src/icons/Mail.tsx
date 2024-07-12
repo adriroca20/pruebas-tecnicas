@@ -1,7 +1,7 @@
 export const Mail = () => {
   return (
     <svg
-      className="icon icon-tabler icon-tabler-mail h-8"
+      className="icon icon-tabler icon-tabler-mail"
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
